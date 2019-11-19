@@ -1,15 +1,48 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
-
+{% block title %}Inscription{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('inscription') }}
+{% endblock %}
 {% block body %}
-    <h1>Register</h1>
 
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/772582/images/4220800/api-platform-logo-500x500.png" id="icon" alt="User Icon" />
+      <h1>Nouvelle utilisateur</h1>
+    </div>
+
+    <!-- Login Form -->
     {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.username) }}
         {{ form_row(registrationForm.plainPassword) }}
         {{ form_row(registrationForm.agreeTerms) }}
-
-        <button class="btn">Register</button>
+        <input type="submit" class="fadeIn fourth btn-register" value="S'inscrire">
     {{ form_end(registrationForm) }}
+    <a href="{{ path('app_login') }}">
+      <input type="button" class="fadeIn fourth btn-login" value="J'ai deja un compte">
+    </a>
+
+    <!-- Remind Passowrd 
+    <div id="formFooter">
+      <a class="underlineHover" href="index">Retour au site</a>
+    </div>
+-->
+  </div>
+</div>
+
+   
 {% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('inscription') }}
+{% endblock %}
+
+
+
