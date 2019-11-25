@@ -7,6 +7,13 @@ html {
   body {
     font-family: "Poppins", sans-serif;
     height: 100vh;
+    background-image: url('https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    background-size: cover;
+  }
+
+  #logo
+  {
+    width: 20rem;
   }
   
   a {
@@ -39,18 +46,22 @@ html {
     min-height: 100%;
     padding: 20px;
   }
+  label
+  {
+    color: white;
+  }
   
   #formContent {
     -webkit-border-radius: 10px 10px 10px 10px;
     border-radius: 10px 10px 10px 10px;
-    background: #fff;
+    background: #00000080;
     padding: 30px;
     width: 90%;
     max-width: 450px;
     position: relative;
     padding: 0px;
-    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 30px 60px 0 rgb(0, 0, 0);
+    box-shadow: 0 30px 60px 0 rgb(0, 0, 0);
     text-align: center;
   }
   

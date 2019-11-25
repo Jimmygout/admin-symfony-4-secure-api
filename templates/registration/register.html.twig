@@ -13,19 +13,20 @@
 
     <!-- Icon -->
     <div class="fadeIn first">
-      <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/772582/images/4220800/api-platform-logo-500x500.png" id="icon" alt="User Icon" />
-      <h1>Nouvelle utilisateur</h1>
+        <img src="https://eleven-strategy.fr/wp-content/uploads//bfi_thumb/learnmore-api-30hd9o2d4ui075zpjczd5y0n4amoucosrvv3kmaemru7bajds.png" id="logo" alt="logo utilisateur" />
     </div>
 
     <!-- Login Form -->
     {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.username) }}
         {{ form_row(registrationForm.plainPassword) }}
-        {{ form_row(registrationForm.agreeTerms) }}
-        <input type="submit" class="fadeIn fourth btn-register" value="S'inscrire">
+        <div class="fadeIn fourth">
+          {{ form_row(registrationForm.agreeTerms) }}
+        </div>
+        <input type="submit" class="fadeIn fourth btn-register btn-5" value="S'inscrire">
     {{ form_end(registrationForm) }}
     <a href="{{ path('app_login') }}">
-      <input type="button" class="fadeIn fourth btn-login" value="J'ai deja un compte">
+      <input type="button" class="fadeIn fourth btn-login btn-5" value="J'ai deja un compte">
     </a>
 
     <!-- Remind Passowrd 

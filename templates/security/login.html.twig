@@ -28,8 +28,9 @@
 
             <!-- Icon -->
             <div class="fadeIn first">
-            <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/772582/images/4220800/api-platform-logo-500x500.png" id="icon" alt="User Icon" />
-            <h1 class="text-center">Connexion</h1>
+    
+            <img src="https://eleven-strategy.fr/wp-content/uploads//bfi_thumb/learnmore-api-30hd9o2d4ui075zpjczd5y0n4amoucosrvv3kmaemru7bajds.png" id="logo" alt="logo utilisateur" />
+
             </div>
 
             <!-- Login Form -->
@@ -38,10 +39,10 @@
             <input type="password" id="password" class="fadeIn third" name="password" placeholder="Mot de passe">
             <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
             
-            <input type="submit" class="fadeIn fourth btn-login" value="Se connecter">
+            <input type="submit" class="fadeIn fourth btn-login btn-5" value="Se connecter">
 
             <a href="{{ path('app_register') }}">
-            <input type="button" class="fadeIn fourth btn-register" value="S'inscrire">
+            <input type="button" class="fadeIn fourth btn-register btn-5" value="S'inscrire">
             </a>
 
             <!-- Remind Passowrd 

@@ -7,6 +7,8 @@ if (!Encore.isRuntimeEnvironmentConfigured()) {
 }
 
 Encore
+// processes files ending in .scss or .sass
+    .enableSassLoader()
     // directory where compiled assets will be stored
     .setOutputPath('public/build/')
     // public path used by the web server to access the output path
@@ -70,5 +72,6 @@ Encore
     //.enableReactPreset()
     //.addEntry('admin', './assets/js/admin.js')
 ;
+
 
 module.exports = Encore.getWebpackConfig();

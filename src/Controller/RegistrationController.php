@@ -36,7 +36,7 @@ class RegistrationController extends AbstractController
 
             // do anything else you need here, like send an email
 
-            return $this->redirectToRoute('https://127.0.0.1:8000/api');
+            return $this->redirectToRoute('app_api');
         }
 
         return $this->render('registration/register.html.twig', [

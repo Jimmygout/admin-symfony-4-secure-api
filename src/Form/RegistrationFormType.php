@@ -31,11 +31,11 @@ class RegistrationFormType extends AbstractType
                 'label' => 'Accepter les termes',
                 'constraints' => [
                     new IsTrue([
-                        'message' => 'You should agree to our terms.',
+                        'message' => 'Vous avez accepté les termes.',
                     ]),
                 ],
                 'attr' => array(
-                    'class' => 'checkmark fadeIn third'
+                    'class' => 'checkmark fadeIn third terme'
                 )
             ])
             ->add('plainPassword', PasswordType::class, [
