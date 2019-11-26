@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Alert index{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1 class="center-align" >Les alertes</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Designation</th>
+                <th>Publier</th>
+                <th>Date de debut</th>
+                <th>Date de fin</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for alert in alerts %}
+            <tr>
+                <td>{{ alert.designation }}</td>
+                <td>{{ alert.afficher ? 'Oui' : 'Non' }}</td>
+                <td>{{ alert.dateDebut ? alert.dateDebut|date('Y-m-d') : '' }}</td>
+                <td>{{ alert.dateFin ? alert.dateFin|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a class="btn btn-primary" href="{{ path('alert_show', {'id': alert.id}) }}">Voir</a>
+                    <a class="btn btn-secondary" href="{{ path('alert_edit', {'id': alert.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </br>
+<div class="center-align">
+    <a href="{{ path('alert_new') }}" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+</div>
+ 
+</div> 
+{% endblock %}
