@@ -9,8 +9,8 @@
 
 {% block body %}
 <div class="box_form">
-    <h1 class="center-align pt-1" >Les alertes</h1>
 
+    <h1 class="center-align pt-1" >Les alertes</h1>
     <table class="table">
         <thead>
             <tr>
@@ -25,27 +25,27 @@
         {% for alert in alerts %}
             <tr>
                 <td>{{ alert.designation }}</td>
-                <td>{{ alert.dateDebut ? alert.dateDebut|date('Y-m-d') : '' }}</td>
-                <td>{{ alert.dateFin ? alert.dateFin|date('Y-m-d') : '' }}</td>
+                <td>{{ alert.dateDebut ? alert.dateDebut|date('d/m/Y') : '' }}</td>
+                <td>{{ alert.dateFin ? alert.dateFin|date('d/m/Y') : '' }}</td>
                 <td>{{ alert.afficher ? 'Publié' : 'Non publié' }}</td>
                 <td>
                 <!--
                     <a class="btn-floating btn-medium waves-effect waves-light blue" href="{{ path('alert_show', {'id': alert.id}) }}"><i class="material-icons">remove_red_eye</i></a>
                  -->
-                    <a class="btn-floating btn-medium waves-effect waves-light green" href="{{ path('alert_edit', {'id': alert.id}) }}"><i class="material-icons">update</i></a>
+                    <a class="tooltipped btn-floating btn-medium waves-effect waves-light green" data-position="top" data-tooltip="Modifier" href="{{ path('alert_edit', {'id': alert.id}) }}"><i class="material-icons">update</i></a>
                     {{ include('alert/_delete_form.html.twig') }}
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="6">no records found</td>
+                <td colspan="6">Pas de résultat trouvé</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
     </br>
 <div class="center-align">
-    <a href="{{ path('alert_new') }}" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+    <a href="{{ path('alert_new') }}" class="tooltipped btn-floating btn-large waves-effect waves-light red"  data-position="top" data-tooltip="Ajouter"><i class="material-icons">add</i></a>
 </div>
  
 </div> 

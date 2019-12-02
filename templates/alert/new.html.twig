@@ -1,11 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Alert{% endblock %}
+{% block title %}Ajout d'alerte{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('crud') }}
+{% endblock %}
 
 {% block body %}
-    <h1>Create new Alert</h1>
+    <div class="box_form">
 
-    {{ include('alert/_form.html.twig') }}
+     <a  href="{{ path('alert_index') }}"><i class="material-icons retour mt-2">
+keyboard_backspace
+</i></a>
 
-    <a href="{{ path('alert_index') }}">back to list</a>
+    <h1 class="center-align pt-1" >Créer une alerte</h1>
+
+{{ include('alert/_form.html.twig', {'button_label': 'Ajouter'}) }}
+    
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('crud') }}
 {% endblock %}

@@ -12,3 +12,26 @@ require('../css/crud.css');
 // const $ = require('jquery');
 
 console.log('Hello Webpack Encore! Edit me in assets/js/crud.js');
+/*
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.datepicker');
+    var instances = M.Datepicker.init(elems, options);
+  });
+*/
+  // Or with jQuery
+
+  $(document).ready(function(){
+
+    // Format des date et initialisation du datepicke
+    $('.datepicker').datepicker({
+        format : 'dd/mm/yyyy',
+    });
+
+    // Hover des bouton
+    $('.tooltipped').tooltip();
+
+    //Modale
+        $('.modal').modal();
+
+  });
+  

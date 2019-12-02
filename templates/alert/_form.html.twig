@@ -1,4 +1,35 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
+
+
+    <div class="input-field col s6">
+    <label for="last_name">Désignation</label>
+            {{ form_widget(form.designation) }}
+            
+    </div>
+
+
+
+<div class="input-field col s6">
+    <label for="date_debut">Date de debut</label>
+            {{ form_widget(form.date_debut) }}
+            
+    </div>
+
+<div class="input-field col s6">
+    <label for="date_fin">Date de fin</label>
+            {{ form_widget(form.date_fin) }}
+            
+    </div>
+
+     <p>
+      <label>
+        {{ form_widget(form.afficher) }}
+       <span>Etat de publication de l'alerte</span>
+      </label>
+    </p>
+
+
+<div class="center-align">
+        <button class="btn waves-light deep-purple">{{ button_label|default('Valider') }}<i class="material-icons right">send</i></button>
+</div>
+    {{ form_end(form) }}

@@ -1,6 +1,22 @@
-<form method="post" style="display:inline;" action="{{ path('alert_delete', {'id': alert.id}) }}" onsubmit="return confirm('Voullez vous vraiment supprimer cette element ?');">
-    <input type="hidden" name="_method" value="DELETE">
-    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ alert.id) }}">
-         
-    <button class="btn-floating btn-medium waves-effect waves-light black"><i class="material-icons">delete</i></button>
-</form>
+<a class="tooltipped waves-effect btn-floating btn-medium waves-effect waves-light black modal-trigger" data-position="top" data-tooltip="Supprimer" href="#modal1"><i class="material-icons">delete</i></a>
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Suppression de l'alert</h4>
+      <p>Êtes-vous sûr de vouloir supprimer cette alerte ?</p>
+    </div>
+    <div class="modal-footer">
+
+    <a href="#!" class="croix_retour tooltipped modal-action modal-close waves-effect waves-red" data-position="bottom" data-tooltip="Retour"><i class="material-icons">clear</i></a>
+ 
+ <div class="center-align">
+    <form method="post" style="display:inline;" action="{{ path('alert_delete', {'id': alert.id}) }}">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ alert.id) }}">
+        <button class="tooltipped btn-floating btn-medium waves-effect waves-light red accent-4" data-position="top" data-tooltip="Supprimer">
+           <i class="material-icons logo_valider">done</i>
+        </button>
+    </form>
+</div>
+    
+   </div>
+  </div>
